@@ -29,9 +29,9 @@ Scenario: restrict to movies with 'PG' or 'R' ratings
   # enter step to "submit" the search form on the homepage
   Given I press Refresh
   # enter step(s) to ensure that PG and R movies are visible
-  I should see /PG/ /R/
+  I should see PG
   # enter step(s) to ensure that other movies are not visible
-  I should not see /G/ /PG-13/
+  I should not see G
 
 Scenario: no ratings selected
   # see assignment
