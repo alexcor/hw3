@@ -32,5 +32,5 @@ When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
   		uncheck rating
   	else
   		check rating
-  end
+  # end
 end
