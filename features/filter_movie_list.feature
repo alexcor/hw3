@@ -29,7 +29,7 @@ Scenario: restrict to movies with 'PG' or 'R' ratings
   # enter step to "submit" the search form on the homepage
   Given I press Refresh
   # enter step(s) to ensure that PG and R movies are visible
-  I should see:
+  I should see
   | title                   | rating | release_date |
   | The Terminator          | R      | 26-Oct-1984  |
   | When Harry Met Sally    | R      | 21-Jul-1989  |
@@ -37,7 +37,7 @@ Scenario: restrict to movies with 'PG' or 'R' ratings
   | The Incredibles         | PG     | 5-Nov-2004   |
   | Raiders of the Lost Ark | PG     | 12-Jun-1981  |
   # enter step(s) to ensure that other movies are not visible
-  I should not see:
+  I should not see
   | title                   | rating | release_date |
   | Aladdin                 | G      | 25-Nov-1992  |
   | The Help                | PG-13  | 10-Aug-2011  |
