@@ -19,7 +19,9 @@ end
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   #  ensure that that e1 occurs before e2.
   #  page.body is the entire content of the page as a string.
-  flunk "Unimplemented"
+  # flunk "Unimplemented"
+  debugger
+  assert page.body.find(e1) >= page.body.find(e2) 
 end
 
 Then /^I should see none of the movies$/ do
