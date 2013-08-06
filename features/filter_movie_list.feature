@@ -25,9 +25,10 @@ Scenario: restrict to movies with 'PG' or 'R' ratings
   # enter step(s) to check the 'PG' and 'R' checkboxes
   Given I check the following ratings: R PG
   # enter step(s) to uncheck all other checkboxes
-  Given I uncheck the following ratings: PG-13 G
+  And I uncheck the following ratings: PG-13 G
   # enter step to "submit" the search form on the homepage
-  Given I press Refresh
+  And I press ratings_submit
+  And  I am on the RottenPotatoes home page
   # enter step(s) to ensure that PG and R movies are visible
   Then I should see PG
   # enter step(s) to ensure that other movies are not visible
