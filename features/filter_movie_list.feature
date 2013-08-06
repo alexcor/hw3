@@ -45,9 +45,11 @@ Scenario: restrict to movies with 'PG' or 'R' ratings
 Scenario: no ratings selected
   # see assignment
   Given I uncheck the following ratings: R, PG, PG-13, G
-  Then I should see none of the movies
+  Then I am on the RottenPotatoes home page
+  And I should see none of the movies
 
 Scenario: all ratings selected
   # see assignment
   Given I check the following ratings: R, PG, PG-13, G
-  Then I should see all of the movies
+  Then I am on the RottenPotatoes home page
+  And I should see all of the movies

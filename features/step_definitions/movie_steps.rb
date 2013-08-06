@@ -23,15 +23,16 @@ Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
 end
 
 Then /^I should see none of the movies$/ do
+    debugger
     moviesInPage = page.all("table#movies tbody tr td[1]").map! {|t| t.text}
   	assert moviesInPage.size == 0
-	pending # express the regexp above with the code you wish you had
+	# pending # express the regexp above with the code you wish you had
 end
 
 Then /^I should see all of the movies$/ do
     moviesInPage = page.all("table#movies tbody tr td[1]").map! {|t| t.text}
   	assert Movie.all.count == moviesInPage.size
-	pending # express the regexp above with the code you wish you had
+	# pending # express the regexp above with the code you wish you had
 end
 
 # Make it easier to express checking or unchecking several boxes at once
