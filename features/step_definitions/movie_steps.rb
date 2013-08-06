@@ -24,14 +24,14 @@ end
 
 Then /^I should see none of the movies$/ do
     moviesInPage = page.all("table#movies tbody tr td[1]").map! {|t| t.text}
-	debugger
+	# debugger
 	assert moviesInPage.size == 0
 	# pending # express the regexp above with the code you wish you had
 end
 
 Then /^I should see all of the movies$/ do
     moviesInPage = page.all("table#movies tbody tr td[1]").map! {|t| t.text}
-  	debugger
+  	# debugger
   	assert Movie.all.count == moviesInPage.size
 	# pending # express the regexp above with the code you wish you had
 end
